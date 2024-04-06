@@ -40,7 +40,7 @@ h3 {
   font-family: var(--font-heading), sans-serif;
   font-size: 24px;
   font-weight: 700;
-  color: var(--color-primary);
+  /* color: var(--color-primary); */
 }
 
 h4 {
@@ -50,7 +50,7 @@ h4 {
   color: var(--color-primary);
 }
 
-h4>b {
+h4 > b {
   font-family: var(--font-body), sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -88,12 +88,19 @@ h4>b {
   color: var(--color-primary);
   border-radius: 12px;
 
-  transition: all 0.5s ease-out;
+  width: 200px;
+
+  transition: all 1s ease;
 }
 
 .sticky {
   position: fixed;
   top: 0;
+}
+
+.full-width {
+  width: 100vw;
+  border-radius: 0;
 }
 
 .name-box {
@@ -113,8 +120,9 @@ p.divider {
   border-radius: 4px;
 }
 
-.description-box>.content {
+.description-box > .content {
   text-align: center;
+  width: 25ch;
 }
 
 #gallery {
@@ -136,4 +144,9 @@ p.divider {
   height: auto;
   aspect-ratio: 1 / 1;
   object-fit: cover;
+}
+
+#placeholder {
+  height: 5ch;
+  display: none;
 }
