@@ -50,7 +50,7 @@ h4 {
   color: var(--color-primary);
 }
 
-h4 > b {
+h4>b {
   font-family: var(--font-body), sans-serif;
   font-size: 16px;
   font-weight: 700;
@@ -91,9 +91,9 @@ h4 > b {
   transition: all 0.5s ease-out;
 }
 
-.description-box.fixed {
-  /* position: fixed; */
-  /* top: 0; */
+.sticky {
+  position: fixed;
+  top: 0;
 }
 
 .name-box {
@@ -113,7 +113,7 @@ p.divider {
   border-radius: 4px;
 }
 
-.description-box > .content {
+.description-box>.content {
   text-align: center;
 }
 
