@@ -2,19 +2,22 @@ let descriptionBox = document.querySelector(".description-box");
 let placeholder = document.querySelector("#placeholder");
 
 let descriptionBoxFullContent = `
-  <div class="name-box">
+  <div class="name-box full">
     <h3>Gabriela Brás</h3>
     <p class="divider"></p>
-    <h3>ximbica</h3>
+    <h4>Maquiadora profissional</h4>
   </div>
   <div class="content">
-    <h4>Estudante de moda na universidade de São Paulo, <b>maquiadora profissional</b>.</h4>
+    <h5>Estudante de moda na universidade de São Paulo, <b>maquiadora profissional</b>.</h5>
   </div>
 `;
 
 let descriptionBoxShortContent = `
-  <div class="name-box">
-    <h3>ximbica</h3>
+  <div class="name-box short">
+    <h3 class="mx-16 w-fit">Gabriela Brás</h3>
+    <a class="mx-16 w-fit">
+      <h6>entrar em contato</h6>
+    </a>
   </div>
 `;
 

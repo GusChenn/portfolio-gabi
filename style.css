@@ -16,10 +16,9 @@
   -moz-osx-font-smoothing: grayscale;
 
   /* variables */
-  --color-neutral: rgb(249, 245, 246);
-  --color-primary: rgb(158, 57, 94);
-  --color-secondary: rgb(242, 190, 209);
-  --color-tertiary: rgb(253, 206, 223);
+  --color-neutral: #faf3f0;
+  --color-primary: #353535;
+  --color-secondary: #dbc4f0;
 
   --font-heading: "Quicksand", sans-serif;
   --font-body: "Spline Sans", sans-serif;
@@ -44,16 +43,43 @@ h3 {
 }
 
 h4 {
+  font-family: var(--font-heading), sans-serif;
+  font-size: 20px;
+  font-weight: 700;
+}
+
+h5 {
   font-family: var(--font-body), sans-serif;
   font-size: 16px;
   font-weight: 400;
   color: var(--color-primary);
 }
 
-h4 > b {
+h5>b {
   font-family: var(--font-body), sans-serif;
   font-size: 16px;
   font-weight: 700;
+  color: var(--color-primary);
+}
+
+h6 {
+  font-family: var(--font-body), sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  color: var(--color-primary);
+}
+
+a {
+  text-decoration: underline;
+  text-underline-offset: 4px;
+}
+
+a:active {
+  color: var(--color-secondary);
+}
+
+.fa-brands {
+  font-size: 36px;
   color: var(--color-primary);
 }
 
@@ -69,6 +95,7 @@ h4 > b {
   height: 300px;
   border-radius: 50%;
   overflow: hidden;
+  border: solid var(--color-secondary) 5px;
 }
 
 .profile-picture img {
@@ -84,13 +111,14 @@ h4 > b {
   justify-content: center;
   padding: 16px 32px;
   row-gap: 16px;
-  background-color: var(--color-tertiary);
+  background-color: var(--color-secondary);
   color: var(--color-primary);
   border-radius: 12px;
+  text-align: center;
 
   width: 200px;
 
-  transition: all 1s ease;
+  transition: width 0.5s ease;
 }
 
 .sticky {
@@ -101,6 +129,7 @@ h4 > b {
 .full-width {
   width: 100vw;
   border-radius: 0;
+  flex-wrap: nowrap;
 }
 
 .name-box {
@@ -109,8 +138,14 @@ h4 > b {
   align-items: center;
   justify-content: center;
   row-gap: 8px;
-  padding: 0;
+  padding: 0 16px;
   font-family: var(--font-heading), sans-serif;
+}
+
+.name-box.short {
+  width: 100%;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
 p.divider {
@@ -120,7 +155,7 @@ p.divider {
   border-radius: 4px;
 }
 
-.description-box > .content {
+.description-box>.content {
   text-align: center;
   width: 25ch;
 }
@@ -149,4 +184,41 @@ p.divider {
 #placeholder {
   height: 5ch;
   display: none;
+}
+
+#links {
+  width: 100%;
+}
+
+.flex-center {
+  display: flex;
+  justify-content: center;
+}
+
+.col-8 {
+  column-gap: 8px;
+}
+
+.px-16 {
+  padding: 0 16px;
+}
+
+.mx-16 {
+  margin: 0 16px;
+}
+
+.w-50 {
+  width: 50%;
+}
+
+.w-75 {
+  width: 75%;
+}
+
+.w-25 {
+  width: 25%;
+}
+
+.w-fit {
+  width: fit-content;
 }
