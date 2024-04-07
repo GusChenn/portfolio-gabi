@@ -1,4 +1,4 @@
-const images = import.meta.glob("/public/images/*");
+const images = import.meta.glob("/images/*");
 const gallery = document.getElementById("gallery");
 
 const makeGalleryBox = (imagePath) => {
