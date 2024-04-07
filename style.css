@@ -24,6 +24,10 @@
   --font-body: "Spline Sans", sans-serif;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   padding: 16px;
   display: flex;
@@ -119,6 +123,7 @@ a:active {
   width: 200px;
 
   transition: width 0.5s ease;
+  z-index: 1;
 }
 
 .sticky {
@@ -188,6 +193,110 @@ p.divider {
 
 #links {
   width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.links-container {
+  position: relative;
+  width: fit-content;
+  background-color: var(--color-neutral);
+}
+
+.star {
+  position: absolute;
+  bottom: 0;
+  color: var(--color-secondary);
+  animation-duration: 1s;
+  animation-timing-function: ease-out;
+  animation-direction: alternate;
+  animation-iteration-count: 2;
+  animation-delay: 0.5s;
+  z-index: -1;
+}
+
+.star-right-up {
+  animation-name: moveStarRightUp;
+}
+
+.star-center-up {
+  animation-name: moveStarUp;
+}
+
+.star-left-up {
+  animation-name: moveStarLeftUp;
+}
+
+.star-right-down {
+  animation-name: moveStarRightDown;
+}
+
+.star-center-down {
+  animation-name: moveStarDown;
+}
+
+.star-left-down {
+  animation-name: moveStarLeftDown;
+}
+
+@keyframes moveStarLeftUp {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  100% {
+    transform: rotate(0.2turn) translateY(-100px);
+  }
+}
+
+@keyframes moveStarRightUp {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  100% {
+    transform: rotate(-0.2turn) translateY(-100px);
+  }
+}
+
+@keyframes moveStarUp {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  100% {
+    transform: translateY(-40px);
+  }
+}
+
+@keyframes moveStarDown {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  100% {
+    transform: translateY(25px);
+  }
+}
+
+@keyframes moveStarLeftDown {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  100% {
+    transform: rotate(0.2turn) translateY(85px);
+  }
+}
+
+@keyframes moveStarRightDown {
+  0% {
+    transform: rotate(0deg) translateY(0px);
+  }
+
+  100% {
+    transform: rotate(-0.2turn) translateY(85px);
+  }
 }
 
 .flex-center {

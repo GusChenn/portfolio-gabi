@@ -1,3 +1,5 @@
+import { addStarAnimations } from "./stars";
+
 let descriptionBox = document.querySelector(".description-box");
 let placeholder = document.querySelector("#placeholder");
 
@@ -14,8 +16,8 @@ let descriptionBoxFullContent = `
 
 let descriptionBoxShortContent = `
   <div class="name-box short">
-    <h3 class="mx-16 w-fit">Gabriela Brás</h3>
-    <a class="mx-16 w-fit">
+    <h3 class="mx-16">Gabriela Brás</h3>
+    <a class="contact-button mx-16" href="#hero">
       <h6>entrar em contato</h6>
     </a>
   </div>
@@ -28,6 +30,9 @@ window.addEventListener("scroll", () => {
     descriptionBox.classList.add("sticky", "full-width");
     descriptionBox.innerHTML = descriptionBoxShortContent;
     placeholder.style.display = "block";
+
+    let contactButton = document.querySelector(".contact-button");
+    contactButton.addEventListener("click", () => addStarAnimations());
   } else {
     descriptionBox.classList.remove("sticky", "full-width");
     descriptionBox.innerHTML = descriptionBoxFullContent;
