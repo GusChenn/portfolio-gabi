@@ -1,3 +1,5 @@
+const contactButton = document.querySelector(".contact-button");
+
 const classes = [
   "star-left-up",
   "star-right-up",
@@ -17,3 +19,5 @@ export let addStarAnimations = () => {
     );
   });
 };
+
+contactButton.addEventListener("click", addStarAnimations);
