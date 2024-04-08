@@ -1,5 +1,12 @@
-const images = import.meta.glob("/images/*");
+const imagePaths = Object.values(
+  import.meta.glob("/assets/*.{png,jpg,jpeg,PNG,JPEG}", {
+    eager: true,
+    as: "url",
+  }),
+);
 const gallery = document.getElementById("gallery");
+
+console.log(imagePaths);
 
 const makeGalleryBox = (imagePath) => {
   const galleryEntry = `
@@ -11,9 +18,7 @@ const makeGalleryBox = (imagePath) => {
   gallery.innerHTML += galleryEntry;
 };
 
-for (const imagePath in images) {
-  makeGalleryBox(imagePath);
-}
+imagePaths.forEach((imagePath) => makeGalleryBox(imagePath));
 
 const galleryBoxImages = document.querySelectorAll(".gallery-box-img");
 
