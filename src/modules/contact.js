@@ -1,5 +1,6 @@
 const contactButton = document.querySelector(".contact-button");
 const linksSection = document.querySelector(".links-container");
+const homeButton = document.querySelector(".home-button");
 
 const highlightLinks = (element) => {
   element.style.backgroundColor = "var(--color-secondary)";
@@ -17,8 +18,11 @@ ScrollReveal().reveal(".links-container", {
   afterReveal: highlightLinks,
 });
 
-contactButton.addEventListener("click", (event) => {
+const scrollToLinksSection = (event) => {
   event.preventDefault();
 
   linksSection.scrollIntoView({ block: "center", behavior: "smooth" });
-});
+};
+
+contactButton.addEventListener("click", scrollToLinksSection);
+homeButton.addEventListener("click", scrollToLinksSection);

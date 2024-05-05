@@ -81,6 +81,14 @@ h6 {
   color: var(--color-primary);
 }
 
+.pointer {
+  cursor: pointer;
+}
+
+.home-button {
+  text-decoration: none;
+}
+
 a {
   text-decoration: underline;
   text-underline-offset: 4px;
