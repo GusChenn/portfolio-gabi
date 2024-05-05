@@ -1,4 +1,4 @@
-import { addStarAnimations } from "./stars";
+// import { addStarAnimations } from "./stars";
 
 // let descriptionBox = document.querySelector(".description-box");
 // let placeholder = document.querySelector("#placeholder");
